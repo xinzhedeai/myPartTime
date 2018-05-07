@@ -1,0 +1,22 @@
+var footlogo = '<span style="vertical-align: top;display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;技术支持</span> <a id="flogo" target="_blank" href="http://www.uemo.net"><img src="http://resources.jsmo.xin/templates/upload/2/logo/logo.png" width="50" height="20"></a>';
+if (window.location.origin.indexOf('uemo.net') != -1 && !$('flogo')[0]) {
+    $(footlogo).appendTo('#footer>p');
+    $('#assistBtn ._fa-qq').attr('href', 'tel:010-69557550');
+    $('#assistBtn ._fa-qq').attr('href', 'tencent://message/?uin=2852263145&Site=uemo&Menu=yes');
+
+    $('#contactinfo .name').text('魔艺(UEmo)极速建站系统');
+    $('#contactinfo .add').text('地址：北京市建外SOHO东区2号楼');
+    $('#contactinfo .zip').text('邮编：100000');
+    $('#contactinfo .tel').text('电话：010-69557550');
+    $('#contactinfo .mobile').text('手机：13521043455  /  13811334772');
+    $('#contactinfo .eml').text('邮箱：touch@uelike.com');
+    $('#online_lx #olx_qq a').attr('href', 'tencent://message/?uin=2852263145&Site=uemo&Menu=yes')
+        .text('2852263145');
+    $('#online_lx #olx_tel p').text('010-69557550');
+
+    var add = '<li class="navitem"> <a href="http://www.uemo.net/" target="_blank"> <span data-title="返回UEmo">返回UEmo</span> </a></li>';
+
+    $(add).insertAfter($('#header .content #nav>.navitem:last'));
+    $(add).insertAfter($('#navMini .content #nav>.navitem:last'));
+    $("#copyright").remove();
+}
